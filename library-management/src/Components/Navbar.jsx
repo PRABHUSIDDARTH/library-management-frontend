@@ -1,12 +1,15 @@
-import {Link} from "react-router";
+import NavItem from "./NavItem";
 function Navbar(){
-    return(
+    const navItems = [
+    { path: "/", label: "Home" },
+    { path: "/genre", label: "Genre" },
+    { path: "/books", label: "Books" },
+    { path: "/member", label: "Member" }
+   ];
+    return(        
         <div>
             <h1>Library-Management</h1><br />
-            <Link to="/">Home </Link>
-            <Link to="/genre">Genre </Link>
-            <Link to="/books">Books </Link>
-            <Link to="/member">Member </Link>
+            {navItems.map(item =>(<NavItem path={item.path} label={item.label} />))}
         </div>
         
     )
