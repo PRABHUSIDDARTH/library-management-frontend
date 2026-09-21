@@ -9,7 +9,7 @@ function Navbar(){
     return(        
         <div>
             <h1>Library-Management</h1><br />
-            {navItems.map(item =>(<NavItem path={item.path} label={item.label} />))}
+            {navItems.map(item =>(<NavItem key={item.path} path={item.path} label={item.label} />))}
         </div>
         
     )
